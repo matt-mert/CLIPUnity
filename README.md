@@ -1,4 +1,4 @@
-# CLIPUnity
+# CLIP for Unity
 
 Offline, on-device image indexing and search for Unity using OpenAI’s CLIP model.
 
