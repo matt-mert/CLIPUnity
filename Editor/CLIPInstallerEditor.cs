@@ -6,33 +6,6 @@ using UnityEngine.Networking;
 
 namespace CLIPUnity.Editor
 {
-    [InitializeOnLoad]
-    public static class CLIPInstallerAuto
-    {
-        private const string EditorPrefKey = "CLIPInstallerShown";
-
-        static CLIPInstallerAuto()
-        {
-            EditorApplication.delayCall += ShowInstallerIfNeeded;
-        }
-
-        private static void ShowInstallerIfNeeded()
-        {
-            if (EditorPrefs.GetBool(EditorPrefKey, false))
-                return;
-
-            var sa = Application.streamingAssetsPath;
-            var hasAny = Directory.Exists(sa) &&
-                          Directory.GetDirectories(sa, "clipunity-*").Any();
-
-            if (!hasAny)
-            {
-                EditorPrefs.SetBool(EditorPrefKey, true);
-                CLIPInstallerWindow.ShowWindow();
-            }
-        }
-    }
-    
     /// <summary>
     /// A simple installer window to download the CLIP executables into StreamingAssets.
     /// </summary>
