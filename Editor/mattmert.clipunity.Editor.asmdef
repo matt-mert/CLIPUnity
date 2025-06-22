@@ -1,0 +1,7 @@
+{
+	"name": "mattmert.clipunity.Editor",
+	"rootNamespace": "CLIPUnity",
+	"references": [
+		"mattmert.clipunity.Runtime"
+	]
+}

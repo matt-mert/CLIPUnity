@@ -1,0 +1,29 @@
+{
+  "name": "com.mattmert.clipunity",
+  "version": "1.0.0",
+  "displayName": "CLIP for Unity",
+  "description": "CLIP for Unity allows to use CLIP library by OpenAI in the Unity engine.",
+  "unity": "2022.3",
+  "unityRelease": "16f1",
+  "documentationUrl": "https://mattmert.com/CLIPUnity",
+  "keywords": [
+    "llm",
+    "large language model",
+    "Llama",
+    "GPT",
+    "ChatGPT",
+    "artificial intelligence",
+    "AI",
+    "NPC",
+    "conversation",
+    "dialogue",
+    "chat",
+    "chatbot",
+    "generative"
+  ],
+  "author": {
+    "name": "Matt-Mert",
+    "email": "hello@mattmert.com",
+    "url": "https://mattmert.com"
+  }
+}
