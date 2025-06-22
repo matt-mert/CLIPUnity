@@ -6,12 +6,38 @@ using UnityEngine.Networking;
 
 namespace CLIPUnity.Editor
 {
+    [InitializeOnLoad]
+    public static class CLIPInstallerAuto
+    {
+        private const string EditorPrefKey = "CLIPInstallerShown";
+
+        static CLIPInstallerAuto()
+        {
+            EditorApplication.delayCall += ShowInstallerIfNeeded;
+        }
+
+        private static void ShowInstallerIfNeeded()
+        {
+            if (EditorPrefs.GetBool(EditorPrefKey, false))
+                return;
+
+            var sa = Application.streamingAssetsPath;
+            var hasAny = Directory.Exists(sa) &&
+                          Directory.GetDirectories(sa, "clipunity-*").Any();
+
+            if (!hasAny)
+            {
+                EditorPrefs.SetBool(EditorPrefKey, true);
+                CLIPInstallerWindow.ShowWindow();
+            }
+        }
+    }
+    
     /// <summary>
     /// A simple installer window to download the CLIP executables into StreamingAssets.
     /// </summary>
     public class CLIPInstallerEditor : EditorWindow
     {
-        // You should tag your GitHub release with this exact string (e.g. v1.0.0)
         private const string Version = "v1.0.0";
 
         [MenuItem("Tools/CLIP Installer")]
@@ -32,16 +58,14 @@ namespace CLIPUnity.Editor
 
         private void PerformInitialSetup()
         {
-            bool isWindows = Application.platform == RuntimePlatform.WindowsEditor;
-            string assetName = isWindows ? "clip_tool.exe" : "clip_tool";
-            string platformFolder = isWindows ? "windows" : "macos";
+            var isWindows = Application.platform == RuntimePlatform.WindowsEditor;
+            var assetName = isWindows ? "clip_tool.exe" : "clip_tool";
+            var platformFolder = isWindows ? "win" : "mac";
 
-            // GitHub Releases URL for the asset
-            string url = $"https://github.com/matt-mert/CLIPUnity/releases/download/{Version}/{assetName}";
+            var url = $"https://github.com/matt-mert/CLIPUnity/releases/download/{Version}/{assetName}";
 
-            // Destination inside project's StreamingAssets/clipunity-vX.X.X/
-            string destDir = Path.Combine(Application.streamingAssetsPath, $"clipunity-{Version}", platformFolder);
-            string destPath = Path.Combine(destDir, assetName);
+            var destDir = Path.Combine(Application.streamingAssetsPath, $"clipunity-{Version}", platformFolder);
+            var destPath = Path.Combine(destDir, assetName);
 
             if (File.Exists(destPath))
             {
@@ -51,7 +75,6 @@ namespace CLIPUnity.Editor
 
             Directory.CreateDirectory(destDir);
 
-            // Download with progress bar
             try
             {
                 using (var uwr = UnityWebRequest.Get(url))
