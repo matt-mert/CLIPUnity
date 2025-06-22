@@ -3,7 +3,7 @@
 Offline, on-device image indexing and search for Unity using OpenAI’s CLIP model.
 
 [![Unity 2021.3+](https://img.shields.io/badge/Unity-2021.3%2B-blue.svg)](#)  
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)  
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/matt-mert/CLIPUnity/blob/master/LICENSE.md)  
 [![GitHub Release](https://img.shields.io/github/v/release/matt-mert/CLIPUnity?label=latest%20release)](https://github.com/matt-mert/CLIPUnity/releases)
 
 ---
