@@ -10,7 +10,7 @@ Offline, on-device image indexing and search for Unity using OpenAI’s CLIP mod
 
 ## 🚀 Features
 
-- **Offline image indexing** with CLIP (ViT-B/32)
+- **Offline image indexing** with [CLIP](https://github.com/openai/CLIP) (ViT-B/32)
 - **Unity Editor integration**
     - Preprocess folder of sprites → `index.pt`
     - Live search with threshold & Top-K
