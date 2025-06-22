@@ -32,7 +32,7 @@ Offline, on-device image indexing and search for Unity using OpenAI’s CLIP mod
 
 ## ⚙️ Initial Setup
 
-After install, an installer window will pop up (first time only). Click **Initial Setup** to:
+After install, go to Tools → CLIP Installer. Click **Initial Setup** to:
 
 1. Download the correct `clip_tool` pre-built binary for your OS.
 2. It will be placed in  
