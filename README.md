@@ -109,7 +109,7 @@ Please adhere to the existing code style.
 
 ## ⚖️ License
 
-This project is licensed under the MIT License. See [LICENSE](https://github.com/matt-mert/CLIPUnity/blob/master/LICENSE) for full details.
+This project is licensed under the MIT License. See [LICENSE](https://github.com/matt-mert/CLIPUnity/blob/master/LICENSE.md) for full details.
 
 ## 👤 Author
 
