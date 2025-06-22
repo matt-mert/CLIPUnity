@@ -21,12 +21,59 @@ Offline, on-device image indexing and search for Unity using OpenAI’s CLIP mod
 
 ---
 
-## 📦 Installation
+## 📦 Install via OpenUPM
 
-1. Open Unity (2021.3 LTS or newer).
-2. Window → Package Manager → **+** → *Add package from git URL…*
-3. Enter: https://github.com/matt-mert/CLIPUnity.git
-4. Click **Add**.
+- This package is available on [OpenUPM](https://openupm.com/packages/com.mattmert.clipunity/) package registry.
+- Using this method, you can easily receive updates as they are released.
+- If you have [openupm-cli](https://github.com/openupm/openupm-cli) installed, run the following command in your project's directory:
+
+```
+openupm add com.mattmert.clipunity
+```
+
+- For updating, you can use the package manager UI or run the following command with the version:
+
+```
+openupm add com.mattmert.clipunity@X.X.X
+```
+
+- When updating, make sure you remove all `clipunity-*` directories under the StreamingAssets folder.
+
+---
+
+## 📦 Install via UPM (Package Manager UI)
+
+- Window → Package Manager → **+** → *Add package from git URL…*
+- Enter: https://github.com/matt-mert/CLIPUnity.git
+- Click **Add**.
+
+
+- For updating, you can use the package manager UI or enter a specific version like:
+
+    - https://github.com/matt-mert/CLIPUnity.git#X.X.X
+
+
+- When updating, make sure you remove all `clipunity-*` directories under the StreamingAssets folder.
+
+---
+
+## 📦 Install via UPM (Manually)
+
+- Open the `Packages/manifest.json` file in your project. Then add this package to the `dependencies` block:
+
+```json
+  {
+    "dependencies": {
+      ...
+      "com.mattmert.clipunity": "https://github.com/matt-mert/CLIPUnity.git",
+      ...
+    }
+  }
+  ```
+
+- For updating, you can use the package manager UI or enter #X.X.X suffix
+
+- When updating, make sure you remove all `clipunity-*` directories under the StreamingAssets folder.
 
 ---
 
@@ -34,12 +81,12 @@ Offline, on-device image indexing and search for Unity using OpenAI’s CLIP mod
 
 After install, go to Tools → CLIP Installer. Click **Initial Setup** to:
 
-1. Download the correct `clip_tool` pre-built binary for your OS.
-2. It will be placed in  
+- Download the correct `clip_tool` pre-built binary for your OS.
+- It will be placed in  
    `Assets/StreamingAssets/clipunity-vX.Y.Z/[windows|macos]/`.
-3. Refresh the AssetDatabase if you don't see it
+- Refresh the AssetDatabase if you don't see it
 
-Remove existing binaries and re-run Initial Setup after updating to a new version tag.
+⚠️ Remove existing binaries (under the StreamingAssets folder) and re-run Initial Setup after updating to a new version tag.
 
 ---
 
@@ -58,14 +105,14 @@ Indexing may take a while. An index.pt file will be created at Application.persi
 
 Note that you need to index the images again if you add/remove items from the folder.
 
-### Live Search (Sample)
+### Live Search (Editor Window)
 
 In the same window:
 
-1. Click **Start Search Session**
-2. Wait for 🟢 “Ready”
-3. Enter a prompt, adjust Top K & Threshold
-4. See thumbnail results update live as you type
+- Click **Start Search Session**
+- Wait for 🟢 “Ready”
+- Enter a prompt, adjust Top K & Threshold
+- See thumbnail results update live as you type
 
 ### Runtime Example (C#)
 
@@ -89,21 +136,21 @@ runtime.Stop();
 
 Thank you for your interest <3
 
-1. Fork this repository and clone.
-2. Create a feature branch:
+- Fork this repository and clone.
+- Create a feature branch:
 
     ```bash
     git checkout -b feat/your-feature
     ```
 
-3. Make your changes, commit, and push:
+- Make your changes, commit, and push:
 
     ```bash
     git commit -am "Add feature X"
     git push origin feat/your-feature
     ```
 
-4. Open a Pull Request and describe your improvements.
+- Open a Pull Request and describe your improvements.
 
 Please adhere to the existing code style.
 
