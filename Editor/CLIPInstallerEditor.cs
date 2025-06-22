@@ -17,7 +17,7 @@ namespace CLIPUnity.Editor
         [MenuItem("Tools/CLIP Installer")]
         public static void ShowWindow()
         {
-            GetWindow<CLIPEditor>("CLIP Installer");
+            GetWindow<CLIPInstallerEditor>("CLIP Installer");
         }
 
         private void OnGUI()
