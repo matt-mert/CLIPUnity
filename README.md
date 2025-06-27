@@ -121,7 +121,7 @@ In the same window:
 // In your game code:
 var runtime = new CLIPRuntime(threshold: 0.6f);
 runtime.Start();
-string[] matches = runtime.Query("blue-haired warriors", 10);
+string[] matches = runtime.Query("cute animals", 10);
 runtime.Stop();
 
 // `matches` contains the filenames of images that match your prompt.
