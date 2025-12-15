@@ -8,7 +8,7 @@ Offline, on-device image indexing and search for Unity using OpenAI’s CLIP mod
 
 ---
 
-## 🚀 Features
+## Features
 
 - **Offline image indexing** with [CLIP](https://github.com/openai/CLIP) (ViT-B/32)
 - **Unity Editor integration**
@@ -22,7 +22,7 @@ Offline, on-device image indexing and search for Unity using OpenAI’s CLIP mod
 
 ---
 
-## 📦 Install via OpenUPM
+## Install via OpenUPM
 
 - This package is available on [OpenUPM](https://openupm.com/packages/com.mattmert.clipunity/) package registry.
 - Using this method, you can easily receive updates as they are released.
@@ -42,7 +42,7 @@ openupm add com.mattmert.clipunity@X.X.X
 
 ---
 
-## 📦 Install via UPM (Package Manager UI)
+## Install via UPM (Package Manager UI)
 
 - Window → Package Manager → **+** → *Add package from git URL…*
 - Enter: https://github.com/matt-mert/CLIPUnity.git
@@ -58,7 +58,7 @@ openupm add com.mattmert.clipunity@X.X.X
 
 ---
 
-## 📦 Install via UPM (Manually)
+## Install via UPM (Manually)
 
 - Open the `Packages/manifest.json` file in your project. Then add this package to the `dependencies` block:
 
@@ -78,7 +78,7 @@ openupm add com.mattmert.clipunity@X.X.X
 
 ---
 
-## ⚙️ Initial Setup
+## Initial Setup
 
 After install, go to Tools → CLIP Installer. Click **Initial Setup** to:
 
@@ -87,11 +87,11 @@ After install, go to Tools → CLIP Installer. Click **Initial Setup** to:
    `Assets/StreamingAssets/clipunity-vX.Y.Z/[windows|macos]/`.
 - Refresh the AssetDatabase if you don't see it
 
-⚠️ Remove existing binaries (under the StreamingAssets folder) and re-run Initial Setup after updating to a new version tag.
+⚠️⚠️⚠️ Remove existing binaries (under the StreamingAssets folder) and re-run Initial Setup after updating to a new version tag.
 
 ---
 
-## 🛠️ Usage
+## Usage
 
 ### Editor: Preprocess Sprites (Required)
 
@@ -127,13 +127,13 @@ runtime.Stop();
 // `matches` contains the filenames of images that match your prompt.
 ```
 
-## 🎯 Requirements
+## Requirements
 
 - Unity 2021.3 LTS or newer
 - .NET 4.x Equivalent scripting runtime
 - Internet access only required for the one-time initial download of the CLIP binaries; all searching is offline.
 
-## 🤝 Contributing
+## Contributing
 
 Thank you for your interest <3
 
@@ -155,10 +155,10 @@ Thank you for your interest <3
 
 Please adhere to the existing code style.
 
-## ⚖️ License
+## License
 
 This project is licensed under the MIT License. See [LICENSE](https://github.com/matt-mert/CLIPUnity/blob/master/LICENSE.md) for full details.
 
-## 👤 Author
+## Author
 
 Made with ❤️ by [matt-mert](https://github.com/matt-mert)
